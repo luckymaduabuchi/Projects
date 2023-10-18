@@ -1,0 +1,10 @@
+Error: external call with symbolic argument: printf
+File: fuzzme.c
+Line: 8
+assembly.ll line: 572
+State: 1
+Stack: 
+	#000000572 in fuzzMe(a=symbolic, b=symbolic, c=94470483447296) at fuzzme.c:8
+	#100000649 in __user_main() at fuzzme.c:38
+	#200000379 in __uClibc_main(94470482889856, 1, 94470473170528, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#300000551 in main(1, 94470473170528)
