@@ -1,0 +1,11 @@
+KLEE: WARNING: undefined reference to function: __syscall_rt_sigaction
+KLEE: WARNING: undefined reference to function: fcntl
+KLEE: WARNING: undefined reference to function: fstat
+KLEE: WARNING: undefined reference to function: ioctl
+KLEE: WARNING: undefined reference to function: open
+KLEE: WARNING: undefined reference to function: write
+KLEE: WARNING: undefined reference to function: kill (UNSAFE)!
+KLEE: WARNING ONCE: calling external: ioctl(0, 21505, 94748763501152) at libc/termios/tcgetattr.c:43 12
+KLEE: WARNING ONCE: calling __user_main with extra arguments.
+KLEE: WARNING ONCE: calling external: printf(94748759853600, (ReadLSB w32 0 a), (ReadLSB w32 0 b), 94748760428032) at fuzzme.c:9 9
+KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.

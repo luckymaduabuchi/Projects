@@ -1,0 +1,14 @@
+Error: free of alloca
+File: fuzzme.c
+Line: 12
+assembly.ll line: 589
+State: 1
+Stack: 
+	#000000589 in fuzzMe(a=symbolic, b=symbolic, c=94748760428032) at fuzzme.c:12
+	#100000649 in __user_main() at fuzzme.c:38
+	#200000379 in __uClibc_main(94748759870592, 1, 94748750151264, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#300000551 in main(1, 94748750151264)
+Info: 
+	address: 94748760428032
+	next: object at 23273873614536 of size 4
+		MO91[4] (no allocation info)

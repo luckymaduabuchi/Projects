@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: libc/string/strcpy.c
+Line: 27
+assembly.ll line: 2807
+State: 4
+Stack: 
+	#000002807 in strcpy(94570237424544, 94570240435712) at libc/string/strcpy.c:27
+	#100000610 in fuzzMe(a=symbolic, b=symbolic, c=94570237980160) at fuzzme.c:19
+	#200000649 in __user_main() at fuzzme.c:38
+	#300000379 in __uClibc_main(94570237422720, 1, 94570227703392, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#400000551 in main(1, 94570227703392)
+Info: 
+	address: 94570237424545
+	next: object at 23070651242184 of size 4
+		MO91[4] (no allocation info)
