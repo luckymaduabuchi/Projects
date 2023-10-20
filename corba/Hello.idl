@@ -1,0 +1,13 @@
+module HelloApp
+{
+  interface Hello
+  {
+  string sayHello();
+  string showMenu();
+  // oneway void shutdown();
+  string placeOrder(in string username, in long chickenCount, in long colaCount);
+  string getOrderStatus(in string username);
+  string allCurrentOrders(in string username);
+  };
+  
+};
