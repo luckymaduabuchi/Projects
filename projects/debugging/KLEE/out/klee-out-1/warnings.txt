@@ -1,7 +1,0 @@
-KLEE: WARNING: undefined reference to function: printf
-KLEE: WARNING: undefined reference to function: strcpy
-KLEE: WARNING: undefined reference to function: strlen
-KLEE: WARNING ONCE: calling external: printf(94677309858480, (ReadLSB w32 0 a), (ReadLSB w32 0 b), 94677310476224) at fuzzme.c:9 9
-KLEE: WARNING ONCE: calling external: strlen(94677310476224) at fuzzme.c:17 31
-KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: strcpy(94677309851184, 94677309912064) at fuzzme.c:20 35
