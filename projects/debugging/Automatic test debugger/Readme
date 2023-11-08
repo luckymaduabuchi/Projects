@@ -1,0 +1,40 @@
+Delta-Debugging Tool
+Overview
+
+This delta-debugging tool automatically identifies changes that introduce bugs in Java applications. It compares two versions of a Java file, applies individual changes (patches), and runs tests to identify which change introduces a bug.
+Prerequisites
+
+    Python 3
+    Java Development Kit (JDK)
+    The patch command-line tool (commonly available in Unix/Linux environments)
+    Ruby (for running the split patch script)
+    A tool for generating diff outputs
+
+Setup
+
+    Ensure that Python 3 and Java JDK are installed on your system.
+    Verify that the patch command is available in your environment (use patch --version to check).
+    Place the original Java file (file1v1.java) and its modified version (file1v2.java) in the project's root directory.
+    Generate a diff_output.txt file using the diff command: diff -U 0 file1v1.java file1v2.java > diff_output.txt.
+    Use a suitable script (e.g., splitpatch. rb) to split diff_output.txt into individual patch files and store them in a patch directory.
+
+Running the Tool
+
+    Ensure the patches are named in sequence and stored in the patch folder, e.g., file1v1.java.000.patch, file1v1.java.001.patch, etc.
+    Place the Python script in the same directory as the patches and the original Java file.
+    Run the script using Python: python3 delta.py.
+        The script will compile the Java file,the binary of the java file (java. class) is stored in the test case, and run tests using each patch to identify which one introduces the bug.
+        The output will display each test step and its result, along with the specific patches that cause test failures.
+
+Notes
+
+    The test cases are predefined within the script, specifically set to run the Java class with arguments 5, 0, and division. Ensure your Java class supports these arguments.
+    The script automatically backs up the original Java file and restores it after each test.
+    Debugging information, including the diffs applied by each patch, will be displayed in the console.
+
+Troubleshooting
+
+    If the script fails to run, ensure that all file paths and patch names are correctly set and that all prerequisites are met.
+    Check Java compilation errors if the script indicates a failure during the compilation phase.
+
+
